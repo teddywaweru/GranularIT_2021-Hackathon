@@ -1,4 +1,5 @@
 const apiUrl = "./data.json";
+<<<<<<< HEAD
 const test = document.getElementById('test');
 const row = document.getElementById('row');
 console.log(row);
@@ -31,12 +32,23 @@ async function getapi(url) {
         test.style.color = 'red'
 })
     
+=======
+
+async function getapi(url) {
+  const res = await fetch(url);
+
+  let data = await res.json();
+  console.log(data);
+  myData = data;
+  courseData(data);
+
+>>>>>>> origin/team1
 }
     
 getapi(apiUrl);
 
 function courseData(data) {
-    let tab = `<tr>
+  let tab = `<tr>
                     <th>Name</th>
                     <th>Overview</th>
                     <th>Duration</th>
@@ -48,8 +60,8 @@ function courseData(data) {
                     <th>Booked Slots</th>
                 </tr>`;
 
-    for (let course of data.courses){
-        tab += `<tr id="courses">
+  for (let course of data.courses) {
+    tab += `<tr id="courses">
             <td id="name">${course.name}</td>
             <td id="overview">${course.overview}</td>
             <td id="duration">${course.duration}</td>
@@ -60,11 +72,12 @@ function courseData(data) {
             <td id="totalSlots">${course.totalSlots}</td>
             <td id="bookedSlots">${course.bookedSlots}</td>
         </tr>`;
-    }
+  }
 
-    document.getElementById("row").innerHTML = tab;
+  document.getElementById("row").innerHTML = tab;
 }
 
+<<<<<<< HEAD
 // function myFilter() {
     //     let input = document.getElementById("filter").value;
     //     input.toLowerCase();
@@ -164,7 +177,23 @@ console.log({modifiedCourses})
 
                    // }
 
+=======
+function myFilter() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("filter");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("row");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+>>>>>>> origin/team1
 }
-
-
-
