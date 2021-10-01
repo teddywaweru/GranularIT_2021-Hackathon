@@ -15,3 +15,7 @@ Pull data from a json file, and show it on the interactive table
 - Filter by times; show all courses happening in a specified time range; ie courses happening between 2pm - 5pm
 - Filter by delivery type - if online, show all courses that are online.
 - Filter by course price (courses between 5000 KSH and 20000 KSH).
+
+### Your staging url
+
+https://team1--granularhackathon2.netlify.app/
