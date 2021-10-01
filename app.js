@@ -1,5 +1,3 @@
-
-
 fetch("./data.json")
     .then(function(resp){
             return resp.json();
