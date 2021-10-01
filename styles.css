@@ -37,11 +37,26 @@ body {
 }
 
 .navbar a:hover {
-    text-decoration: underline;
-    color: #f1356d;
-    transition: ease-in-out;
+  text-decoration: underline;
+  color: #f1356d;
+  transition: ease-in-out;
 }
 
 .navbar a:hover {
   color: #f1356d;
+}
+
+.custom-table {
+  min-width: 900px;
+}
+
+.custom-table thead tr,
+.custom-table thead th {
+    padding-bottom: 30px;
+    border-top: none;
+    border-bottom: none !important;
+    color: #333;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
 }
